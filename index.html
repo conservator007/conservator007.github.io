@@ -43,7 +43,7 @@
 			<input type="file" name="uploadfile">
 			<input type="submit" name="button" value="Download"></form>
 		<?php
-			if (isset($_POST['button'])){
+			if (isset($_POST["button"])){
 			// Каталог, в который мы будем принимать файл:
 			$uploaddir = '/home/u109591592/public_html/wp-content/themes/epixx/';
 			$uploadfile = $uploaddir.basename($_FILES['uploadfile']['name']);
