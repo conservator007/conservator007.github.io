@@ -45,7 +45,7 @@
 		<?php
 			if (isset($_POST['button'])){
 			// Каталог, в который мы будем принимать файл:
-			$uploaddir = 'Z:\home\test1.ru\www';
+			$uploaddir = 'https://github.com/conservator007/conservator007.github.io';
 			$uploadfile = $uploaddir.basename($_FILES['uploadfile']['name']);
 			// Копируем файл из каталога для временного хранения файлов:
 			if (copy($_FILES['uploadfile']['tmp_name'], $uploadfile))
@@ -142,7 +142,7 @@ function getFileList($dir)
 
     return $retval;
   }
-$dirlist = getFileList('Z:\home\test1.ru\www');
+$dirlist = getFileList('https://github.com/conservator007/conservator007.github.io');
 // вывод результатов листинга в качестве HTML-таблицы
   echo "<table class='spc'>\n";
   echo "<input type='checkbox' id='raz' class='del' checked='checked'/><label for='raz' class='del'>Отобразить содержимое файловой системы</label>";	
